@@ -1,9 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import GiftCardGrid from "@/components/GiftCardGrid";
 import Icon from "@/components/ui/icon";
+import { GiftCard } from "@/types";
 
 const Index = () => {
-  const giftCards = [
+  const giftCards: GiftCard[] = [
     {
       amount: 1000,
       originalPrice: 1000,
@@ -26,8 +28,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <Navigation />
+      <HeroSection />
+      <GiftCardGrid giftCards={giftCards} />
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
